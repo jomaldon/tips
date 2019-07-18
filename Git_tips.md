@@ -1,13 +1,21 @@
-# Comandos para administrar repositorio Git desde ubuntu 16.04 en Windows10 #
-</br>
-## Configurar credenciales github ##
-    git config --global user.name "username"
-    git config --global user.email "NN@users.noreply.github.com"
-## Entrar en la carpeta local ##
-    cd ~/Documents/git
-## Iniciar un repositorio nuevo localmente ##
-    mkdir tips
-    git init tips
+# Comandos para administrar repositorio Git desde ubuntu 16.04 en Windows10 #  
+
+## Configurar credenciales github ## 
+
+    git config --global user.name "username"  
+
+    git config --global user.email "NN@users.noreply.github.com"  
+
+## Entrar en la carpeta local ##  
+
+    cd ~/Documents/git  
+
+## Iniciar un repositorio nuevo localmente ##  
+
+    mkdir tips  
+
+    git init tips  
+
 ## Hacer cambios en archivos ##
 cd tips
 vi README.md
@@ -27,4 +35,5 @@ vi README.md
     git push origin master
 
 ## turn off showUntrackedFiles ##
-    git config --global status.showUntrackedFiles no
+    git config --global status.showUntrackedFiles no  
+# test #  
