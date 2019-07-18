@@ -14,6 +14,8 @@ vi README.md
 ## Añadir o eliminar del índice ##
     git add README.md
     git rm README.md
+## borrar del índice dejando la versión local ##
+    git rm --cached README.md
 ## Publicar cambios añadiendo un comentario ##
     git commit -m "this is a test"
 ## Vincular repositorio remoto con el local (nombre exacto) ##
@@ -23,3 +25,6 @@ vi README.md
     git pull origin master
 ## Subir local a web ##
     git push origin master
+
+## turn off showUntrackedFiles ##
+    git config --global status.showUntrackedFiles no
