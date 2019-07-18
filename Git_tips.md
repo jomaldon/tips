@@ -20,6 +20,6 @@ vi README.md
     git remote add origin https://github.com/jomaldon/tips.git
     git remote add origin https://github.com/jomaldon/scripts_bioinfo
 ## Bajar web a local ##
-    git push origin master
-## Subir local a web ##
     git pull origin master
+## Subir local a web ##
+    git push origin master
