@@ -7,6 +7,6 @@
 3. Copy the URL in your browser.
 
 4. In the command line, run either:
-* `wget --no-check-certificate --content-disposition https://URL-from-step3/`
-* `curl -LJO https://URL-from-step3/`
+    * `wget --no-check-certificate --content-disposition https://URL-from-step3/`
+    * `curl -LJO https://URL-from-step3/`
 
