@@ -530,4 +530,6 @@ Ordenar archivo de texto
 
 <p style="text-align: right;"> by Jonathan Maldonado</p>
 
-<p align="right">by Jonathan Maldonado</p>
+<p align="right">by Jonathan Maldonado<br>
+https://github.com/jomaldon
+</p>
