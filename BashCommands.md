@@ -161,8 +161,8 @@ Para usarlo simplemente se ejecuta
 
     nano nombre_archivo.txt
 
-
-![Nano example](Nano.PNG "Nano Example")
+Ejemplo de pantalla del programa *nano*
+![Nano example](images/Nano.PNG "Nano Example")
 
 Los controles aparecen abajo y se ejecutan con la tecla ***control*** y luego la letra del comando deseado. Por ejemplo, salir es **Control+X**.
 
