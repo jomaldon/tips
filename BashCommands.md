@@ -1,3 +1,27 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Lista de Comandos útiles para la terminal de Linux/BASH](#lista-de-comandos-%C3%BAtiles-para-la-terminal-de-linuxbash)
+      - [En esta lista encontrarán una recopilación de comandos que he guardado en mi experiencia con la terminal de Linux/Bash. La mayoría funcionarán en cualquier distribución de Linux (incluso Unix), pero unos cuantos pueden ser particulares de Ubuntu.](#en-esta-lista-encontrar%C3%A1n-una-recopilaci%C3%B3n-de-comandos-que-he-guardado-en-mi-experiencia-con-la-terminal-de-linuxbash-la-mayor%C3%ADa-funcionar%C3%A1n-en-cualquier-distribuci%C3%B3n-de-linux-incluso-unix-pero-unos-cuantos-pueden-ser-particulares-de-ubuntu)
+  - [Ejemplos para listar contenido](#ejemplos-para-listar-contenido)
+  - [Otros comandos de uso general](#otros-comandos-de-uso-general)
+  - [Editores de texto desde la línea de comando](#editores-de-texto-desde-la-l%C3%ADnea-de-comando)
+  - [Editores de texto simple usando interfáz gráfica](#editores-de-texto-simple-usando-interf%C3%A1z-gr%C3%A1fica)
+  - [Ejemplo de comparación de listas](#ejemplo-de-comparaci%C3%B3n-de-listas)
+  - [Modificadores](#modificadores)
+  - [Comandos útiles de sistema](#comandos-%C3%BAtiles-de-sistema)
+  - [Administración de procesos](#administraci%C3%B3n-de-procesos)
+  - [SCRIPTING](#scripting)
+  - [REDES](#redes)
+  - [Búsqueda de archivos](#b%C3%BAsqueda-de-archivos)
+  - [Archivos y Directorios](#archivos-y-directorios)
+  - [Compresión](#compresi%C3%B3n)
+  - [EDICION DE TEXTO](#edicion-de-texto)
+  - [Filtro de información](#filtro-de-informaci%C3%B3n)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Lista de Comandos útiles para la terminal de Linux/BASH
 #### En esta lista encontrarán una recopilación de comandos que he guardado en mi experiencia con la terminal de Linux/Bash. La mayoría funcionarán en cualquier distribución de Linux (incluso Unix), pero unos cuantos pueden ser particulares de Ubuntu.
 
