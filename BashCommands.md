@@ -1,3 +1,7 @@
+# Lista de Comandos útiles para la terminal de Linux/BASH
+#### En esta lista encontrarán una recopilación de comandos que he guardado en mi experiencia con la terminal de Linux/Bash. La mayoría funcionarán en cualquier distribución de Linux (incluso Unix), pero unos cuantos pueden ser particulares de Ubuntu.
+>En los programas de la terminal, el caracter **-** se usa para agregar "modificadores" para los programas o también conocidos como "opciones".
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -20,10 +24,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Lista de Comandos útiles para la terminal de Linux/BASH
-#### En esta lista encontrarán una recopilación de comandos que he guardado en mi experiencia con la terminal de Linux/Bash. La mayoría funcionarán en cualquier distribución de Linux (incluso Unix), pero unos cuantos pueden ser particulares de Ubuntu.
 
->En los programas de la terminal, el caracter **-** se usa para agregar "modificadores" para los programas o también conocidos como "opciones".
+
+
 
 
 ## Ejemplos para listar contenido
