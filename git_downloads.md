@@ -10,3 +10,8 @@
     * `wget --no-check-certificate --content-disposition https://URL-from-step3/`
     * `curl -LJO https://URL-from-step3/`
 
+
+
+<p align="right">by Jonathan Maldonado<br>
+https://github.com/jomaldon
+</p>

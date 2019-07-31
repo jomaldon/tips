@@ -39,3 +39,8 @@
     git config --global status.showUntrackedFiles no
 
 ### test ###
+
+
+<p align="right">by Jonathan Maldonado<br>
+https://github.com/jomaldon
+</p>
