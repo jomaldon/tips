@@ -1,10 +1,10 @@
 # Lista de Comandos útiles para la terminal de Linux/BASH
-####En esta lista encontrarán una recopilación de comandos que he guardado en mi experiencia con la terminal de Linux/Bash. La mayoría funcionarán en cualquier distribución de Linux (incluso Unix), pero unos cuantos pueden ser particulares de Ubuntu.
+#### En esta lista encontrarán una recopilación de comandos que he guardado en mi experiencia con la terminal de Linux/Bash. La mayoría funcionarán en cualquier distribución de Linux (incluso Unix), pero unos cuantos pueden ser particulares de Ubuntu.
 
 >En los programas de la terminal, el caracter **-** se usa para agregar "modificadores" para los programas o también conocidos como "opciones".
 
 
-##Ejemplos para listar contenido
+## Ejemplos para listar contenido
 Lista el contenido de un directorio
 
     ls
@@ -59,7 +59,7 @@ El cuarto bloque son los permisos para todos los usuarios
 Las letras significan lo siguiente:
 >>d: directorio, r: lectura, w: escritura, x: ejecutar. 
 
-##Otros comandos de uso general
+## Otros comandos de uso general
 
 Mostrar en qué carpeta estoy trabajando
 
@@ -143,7 +143,7 @@ Buscar explicación *simple* de algún comando
 
     apropos comando  
 
-##Editores de texto desde la línea de comando
+## Editores de texto desde la línea de comando
 
 En bioinformática generalmente debemos revisar archivos de texto grandes. Esto es un desafío para un editor de texto gráfico pues se requieren muchos recursos para desplegarlo. Sin embargo, es posible revisar e incluso editar estos archivos desde la línea de comandos usando mucho menos recursos.
 Si sólo se desea revisar el contenido lo recomendable es usar comandos como **head**, **tail** o **more** explicados anteriormente.
@@ -166,12 +166,12 @@ Ejemplo de pantalla del programa *nano*
 
 Los controles aparecen abajo y se ejecutan con la tecla ***control*** y luego la letra del comando deseado. Por ejemplo, salir es **Control+X**.
 
-##Editores de texto simple usando interfáz gráfica
+## Editores de texto simple usando interfáz gráfica
 
 Si la distribución de linux utilizada posee interfaz gráfica y/o el sistema está configurado para ejecutar programas la interfaz entonces una opción simple es **mousepad** (liviano) o **gedit**.
 
 
-##Ejemplo de comparación de listas
+## Ejemplo de comparación de listas
 Si A.txt y B.txt son archivos de texto con información que deseo comparar  
 
 ejemplo de archivo A.txt
@@ -208,7 +208,7 @@ UNICOS_A = archivo que contendrá los datos que “sólo” pertenecen al archiv
 
 
 
-##Modificadores
+## Modificadores
 **\*** = Cualquier texto  
 **?** = un carácter cualquiera  
 **\.** = también puede funcionar como 1 caracter cualquiera en expr reg  
@@ -218,7 +218,7 @@ UNICOS_A = archivo que contendrá los datos que “sólo” pertenecen al archiv
 
 
 
-##Comandos útiles de sistema
+## Comandos útiles de sistema
 
 Mostrar **discos** y sus propiedades 
 
@@ -269,7 +269,7 @@ Apagar o reiniciar el sistema. 0: apaga el equipo, 6: reinicia el sistema
     init <numero>  
 
 
-##Administración de procesos
+## Administración de procesos
 Mostrar los procesos activos y su codigo PID
 
     ps -A  
@@ -332,7 +332,7 @@ Continúa en segundo plano el proceso detenido de número **N**
 
     bg N  
 
-##SCRIPTING
+## SCRIPTING
 
 Entregar atributos al archivo para ser ejecutable
 
@@ -371,7 +371,7 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
     $((expresión))
     $(( (4-1)*3 ))
 
-##REDES
+## REDES
 
 **Conectar** con servidor mediante ssh
 
@@ -411,7 +411,7 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
 
     killall ssh
 
-##Búsqueda de archivos
+## Búsqueda de archivos
 
 Buscar archivo segun tag
 
@@ -430,14 +430,14 @@ Ejecutar un comando en los archivos encontrados que poseen el tag. El comando se
 
     find / -name <tag>  -exec <comando> {} \+
 
-##Archivos y Directorios
+## Archivos y Directorios
 
 Tamaño de directorio y sub directorio
 
     du -s -h  <nombredirectorio>
     du -sh  <nombredirectorio> # es lo mismo
 
-##Compresión
+## Compresión
 Descomprimir el contenido de un archivo tipo tgz en la carpeta actual
 
     tar -xfzv <archivo.tgz> 
@@ -459,7 +459,7 @@ Unir los archivos que responden al tag, antes separados con split
     cat <tag>* > <file>
 
 
-##EDICION DE TEXTO
+## EDICION DE TEXTO
 
 Cambiar las mayusculas a minusculas del texto dentro file
 
@@ -473,7 +473,7 @@ Cambiar las letras de un texto por otras por ejemplo “a” por “A”
 
     echo <text> | sed 's/a/A/g'
 
-##Filtro de información
+## Filtro de información
 
 Mostrar las diferencias de ambos archivos
 
