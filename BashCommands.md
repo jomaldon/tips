@@ -524,3 +524,10 @@ Ordenar archivo de texto
 
 <p style="text-align: right;">by Jonathan Maldonado<br>
 [https://github.com/jomaldon](https://github.com/jomaldon "GitHub jomaldon")
+
+<p align="right">by Jonathan Maldonado<br>
+[https://github.com/jomaldon](https://github.com/jomaldon "GitHub jomaldon")
+
+<p style="text-align: right;"> by Jonathan Maldonado</p>
+
+<p align="right">by Jonathan Maldonado</p>
