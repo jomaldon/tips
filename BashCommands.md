@@ -7,7 +7,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Ejemplos para listar contenido](#ejemplos-para-listar-contenido)
-- [Otros comandos de uso general](#otros-comandos-de-uso-general)
+- [Comandos de uso general](#Comandos-de-uso-general)
 - [Editores de texto desde la línea de comando](#editores-de-texto-desde-la-l%C3%ADnea-de-comando)
 - [Editores de texto simple usando interfáz gráfica](#editores-de-texto-simple-usando-interf%C3%A1z-gr%C3%A1fica)
 - [Ejemplo de comparación de listas](#ejemplo-de-comparaci%C3%B3n-de-listas)
@@ -84,7 +84,7 @@ El cuarto bloque son los permisos para todos los usuarios
 Las letras significan lo siguiente:
 >>d: directorio, r: lectura, w: escritura, x: ejecutar. 
 
-## Otros comandos de uso general
+## Comandos de uso general
 
 Mostrar en qué carpeta estoy trabajando
 
