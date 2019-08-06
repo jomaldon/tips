@@ -112,19 +112,20 @@ Mostrar en qué carpeta estoy trabajando
 
 **Borrar** directorio con archivos en su interior **[usar con precaución!!]**
 
-	rm -r nombre_directorio
+    rm -r nombre_directorio
 
-**Mover** archivo desde el directorio1 al directorio2
+**Mover** archivo (el mismo archivo) desde el directorio1 al directorio2
 
-    mv nombre directorio1/nombre_archivo nombre_directorio2/nombre_archivo
+    mv directorio1/nombre_archivo nombre_directorio2/nombre_archivo
 
-**Renombrar** archivo desde archivo1 a archivo2
+**Renombrar** desde archivo1 a archivo2
 
-    mv nombre directorio1/nombre_archivo nombre_directorio2/nombre_archivo
+    mv nombre_archivo1 nombre_archivo2
 
 **Copiar** archivo a un directorio nuevo
 
     cp nombre_archivo nombre_directorio_destino
+
 Mostrar todo el contenido de un archivo (sólo hacerlo con archivos de texto)
 
     cat nombre_archivo
@@ -357,6 +358,10 @@ Continúa en segundo plano el proceso detenido de número **N**
 
     bg N  
 
+Para evitar que le proceso **N** se cierre al cerra la teminal
+
+    disown %N  
+
 ## SCRIPTING
 
 Entregar atributos al archivo para ser ejecutable
@@ -545,6 +550,37 @@ Mostrar las líneas que comienzan por tag
 Ordenar archivo de texto
 
     sort <file>
+
+## Comandos complejos
+Encontrar y ejecutar  
+
+    find . -name "clave*" -exec command {} \; # ejecuta el comando para cada clave encontrada
+    find . -name "clave*" -exec command {} +  # ejecuta el comando una sola vez sumando las claves encontradas
+    find /path/to/base/dir -type d -exec chmod 755 {} + 
+    find /path/to/base/dir -type f -exec chmod 644 {} +
+
+Ejemplo de encontrar y ejecutar. El comando mv con la opción -t fija el directorio "target" al cual mueve todos los archivos de texto
+
+    find . -type f -name '*.txt' -exec mv -t ./test/ {} \+
+
+Re-imprimir columnas
+
+    awk -F '\t' '{print $1}' file.txt # default delimiter is "space"
+    awk 'BEGIN {FS="\t";OFS=";"}{print $1,$3}' file.txt
+
+    cut -f 1,3 --output-delimiter=";" file.txt # default delimiter is "tab"
+    cut -d ';' -f 1,3 --output-delimiter=$'\t' file.txt
+ 
+Uso de sed para reemplazar
+
+    sed 's/antes/despues/' file.txt # salida estandar
+    sed -i 's/antes/despues/' file.txt # editará el archivo
+
+Eliminar líneas con sed  
+https://es.ccm.net/faq/3031-sed-eliminar-una-o-varias-lineas-de-un-fichero
+https://uniwebsidad.com/foro/pregunta/267/como-se-puede-borrar-con-sed-las-lineas-que-contengan-una-determinada-cadena/?from=librosweb
+
+
 
 
 <p align="right">by Jonathan Maldonado<br>
