@@ -126,6 +126,20 @@ Mostrar en qué carpeta estoy trabajando
 
     cp nombre_archivo nombre_directorio_destino
 
+**Copiar** directorio1 a una posición (directorio2)
+
+    cp -r directorio1 directorio2
+    cp -r /home/jomaldon/segundo /home/jomaldon/primero
+    cp -r segundo primero
+
+**Borrar** archivo1
+
+    rm archivo1
+
+**Borrar** directorio1
+
+    rm -r directorio1
+
 Mostrar todo el contenido de un archivo (sólo hacerlo con archivos de texto)
 
     cat nombre_archivo
