@@ -138,6 +138,10 @@ Mostrar en qué carpeta estoy trabajando
 
 **Borrar** directorio1
 
+    rmdir directorio1 
+
+**Borrar** directorio1 que contiene archivos
+
     rm -r directorio1
 
 Mostrar todo el contenido de un archivo (sólo hacerlo con archivos de texto)
