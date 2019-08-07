@@ -27,8 +27,6 @@
 
 
 
-
-
 ## Ejemplos para listar contenido
 Lista el contenido de un directorio
 
@@ -252,7 +250,7 @@ UNICOS_A = archivo que contendrá los datos que “sólo” pertenecen al archiv
 
 
 
-## Modificadores
+## Modificadores o comodines (wildcards)
 **\*** = Cualquier texto  
 **?** = un carácter cualquiera  
 **\.** = también puede funcionar como 1 caracter cualquiera en expr reg  
@@ -337,6 +335,10 @@ Cerrar el proceso de codigo <PID>
 
 Información a tiempo real del uso de los procesos en el sistema
 
+    htop  
+
+Información a tiempo real (simple) del uso de los procesos en el sistema
+
     top  
 
 Crear un alias como nombrealias del comando en archivo .bashrc o .bash_aliases
@@ -351,8 +353,9 @@ Crear un acceso a directorio simbólico
 Elimnar acceso directo
 
     unlink <directorio> <newpath>  
+    rm <newpath>  
 
-Ejecutar comando en background (independiente de la consola)
+Ejecutar comando en background (libera la consola)
 
     <comando> &  
   
@@ -360,11 +363,12 @@ Abortar proceso un proceso que está en ejecución
 
     CRTL + c  
 
-Pausa el proceso actual  
+Pausa el proceso actual y que continúne en background
 
     CRTL + z  
+    bg  
 
-Muestra todos los procesos parados
+Muestra todos los procesos que están en background
 
     jobs  
 	  
@@ -379,6 +383,26 @@ Continúa en segundo plano el proceso detenido de número **N**
 Para evitar que le proceso **N** se cierre al cerra la teminal
 
     disown %N  
+
+Para tener un escritorio "virtual"
+
+    screen -S nombreescritorio
+
+Para salir del escritorio virtual pero que quede en ejecución
+
+     CTRL + AD
+
+Para listar los procesos que están en screen
+
+    screen -dr
+
+Para retomar el screen nombreescritorio
+
+    screen -dr nombreescritorio  
+
+Para cerrar un screen estando dentro
+
+    exit
 
 ## SCRIPTING
 
@@ -458,6 +482,7 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
 **Cerrar puente** terminando todos los procesos ssh
 
     killall ssh
+
 
 ## Búsqueda de archivos
 
