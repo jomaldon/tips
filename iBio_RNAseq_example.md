@@ -18,12 +18,14 @@ Recomiendo que las descargas de programas queden en una carpeta llamada Download
 ### 1.1 Descarga y habilitación de Trimmomatic (útil para trimming de secuencias por calidad y adaptadores)
 
     wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip
-    unzip Trimmomatic/Trimmomatic-0.39.zip
+    unzip Trimmomatic-0.39.zip
 
 ### 1.2 Instalación de Anaconda
-El programa Anaconda es un sistema que permite instalar casi sin problemas software que posee dependencias de otros programas y sin necesidad de permisos de administrador. Una vez instalado se debe "crear un ambiente" en el cual se el usuario instala los programas de interés. Es posible generar diversos ambientes lo cual permite aislar programas cuyas dependencias son incompatibles.
+El programa Anaconda es un sistema que permite instalar casi sin problemas software que posee dependencias de otros programas y sin necesidad de permisos de administrador. Una vez instalado se debe "crear un ambiente" en el cual se el usuario instala los programas de interés. Es posible generar diversos ambientes lo cual permite aislar programas cuyas dependencias son incompatibles.  
 
 >Si Ud. ya posee instalado Anaconda o Miniconda, puede proceder con la instalación del **ambiente** de trabajo que usaremos en este ejemplo (Sección 1.3).
+#
+>**Si Ud. utilizará el servidor proporcionado para el curso puede saltar a la Sección 1.4** pero nuestra recomendación es utilizar su propio computador o acceso personalizado a servidor y seguir toda la guía.
 
 Los links de descarga puede encontrarlos directamente en [https://www.anaconda.com/distribution/](https://www.anaconda.com/distribution/) donde debe seleccionar *macOS* o *Linux* según corresponda. **No use la versión para Windows pues recuerde que en Windows usaremos el WSL**.
 
@@ -44,13 +46,14 @@ Para instalar el programa se debe ejecutar el siguiente comando y seguir las ins
 
     bash Anaconda3-2019.07-Linux-x86_64.sh
 
-Una vez terminado, se debe **salir del sistema y volver a entrar** para que los cambios en las variables de entorno actualizadas. Esto significa cerrar la terminal y volver a abrirla o, deslogearse del sistema y volver a entrar según el caso. [comando *exit*]
+Una vez terminada la instalación se debe responder "SI" (yes) al último mensaje con lo cual el sistema los dejará dentro del "ambiente1" de conda.
 
-Una vez adentro, el siguiente comando previene que el sistema Anaconda se inicie de forma automática 
+El siguiente comando previene que el sistema Anaconda se inicie de forma automática 
 
     conda config --set auto_activate_base false
 
-Salir del sistema y volver a entrar
+Finalmente, **salir del sistema y volver a entrar** para que los cambios en las variables de entorno sean actualizadas. Esto significa cerrar la terminal y volver a abrirla o deslogearse del sistema y volver a entrar según el caso. [comando *exit*]
+
 
 ### 1.3 Instalación de los programas necesarios usando Anaconda
 
@@ -64,7 +67,11 @@ Ahora vamos a agregar a nuestro "ambiente1" los programas que usaremos en esta g
 - Distintos **mapeadores** y **cuantificadores** de uso común y otros mas nuevos.
 - También instalaremos la herramienta **BUSCO** que es útil para evaluar la *calidad* de los transcriptomas de referencia.
 #
-    conda install -n ambiente1 -c bioconda fastqc multiqc bowtie2 minimap last star hisat2 salmon kallisto busco 
+    conda install -n ambiente1 -c bioconda fastqc multiqc salmon
+
+**Como alternativa**, si desea una instalación que le permita probar y comparar diversos "mapeadores" puede ejecutar el siguiente comando (tomará más tiempo y ocupará más espacio de disco).
+
+    conda install -n ambiente2 -c bioconda fastqc multiqc bowtie2 minimap last star hisat2 salmon kallisto busco
 
 >Para información sobre las diferencias entre los mapeadores recomiendo **comenzar** por la discusión de este foro:
 >[https://bioinformatics.stackexchange.com/questions/4507/better-aligner-than-bowtie2](https://bioinformatics.stackexchange.com/questions/4507/better-aligner-than-bowtie2)
@@ -83,6 +90,7 @@ Utilizaremos los datos publicados por el siguiente artículo [https://www.ncbi.n
 
 Para descargar los archivos *reducidos* se puede ejecutar los siguientes comandos
 
+    cd test1
     mkdir raw && cd raw
     wget http://genius.bio.puc.cl/genius/workshop/SRR1811524_1M.fastq.gz
     wget http://genius.bio.puc.cl/genius/workshop/SRR1811525_1M.fastq.gz
@@ -94,6 +102,7 @@ Para descargar los archivos *reducidos* se puede ejecutar los siguientes comando
 
 Para descargar los archivos *originales* se puede ejecutar los siguientes comandos
 
+    cd test1
     mkdir raw && cd raw
     wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR181/004/SRR1811524/SRR1811524.fastq.gz
     wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR181/005/SRR1811525/SRR1811525.fastq.gz
@@ -133,11 +142,11 @@ Asumiendo que es necesario hacer un trimming de los reads, vamos a utilizar el p
 Primero entramos en la carpeta donde están los reads y copiamos en ella el archivo que contiene la secuencia de los adaptadores
 
     cd raw
-    cp ~/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa .
+    cp ~/test1/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa .
 
 El proceso de trimming se debe realizar a todos los archivos, uno a uno, usando el siguiente comando, *modificando los nombres* cada vez que corresponda donde **SRR1811524\_1M\_trimmed.fastq.gz** es el nombre que he asignado al archivo de salida (el cual lógicamente también hay que ir modificando según el caso)
 
-    java -jar ~/bin/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 SRR1811524_1M.fastq.gz SRR1811524_1M_trimmed.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25
+    java -jar ~/test1/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 SRR1811524_1M.fastq.gz SRR1811524_1M_trimmed.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25
 
 Una alternativa al paso anterior es crear un script en bash para hacer esta tarea sobre todos los archivos de forma **automática**. Para ello utilizaremos el string **1M.fastq.gz** como "palabra clave" para que bash encuentre todos los archivos deseados. Esta palabra clave la deben modificar si utilizan otras secuencias.
 
@@ -147,8 +156,9 @@ Pueden usar el editor **nano** para crear el archivo
 
 Pegar en el archivo el siguiente texto, **guardar y salir**
 
+    [ -f TruSeq3-PE.fa ] || cp ~/test1/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa .
     for f in *1M.fastq.gz; do
-    	bash java -jar ~/bin/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 $f $(echo $f | sed s/1M\.fastq\.gz/1M_trimmed\.fastq\.gz/) ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25;
+    	java -jar ~/test1/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 $f $(echo $f | sed s/1M\.fastq\.gz/1M_trimmed\.fastq\.gz/) ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25;
     done
 
 Ejecutar el script de la siguiente manera
@@ -190,7 +200,7 @@ Existen distintos métodos para mapear reads y cuantificar la expresión de gene
 
 Primero es necesario **indexar** el transcriptoma de referencia en un formato compatible con el programa. Note que el comando **-p** permite configurar el número de núcleos de CPU que utilizará el proceso.
 
-    salmon index -t Downloads/TAIR10_cds_20101214_updated -i At_index -p 12
+    salmon index -t databases/TAIR10_cds_20101214_updated -i At_index -p 12
 
 ### 3.2 Salmon: mapeo y cuantificación
 
@@ -272,8 +282,66 @@ Los comandos son los siguientes:
 
 Si todo sale bien, tendremos un archivo tabular (At.separated.quants.txt), cuya primera columna es el nombre del gen y las columnas consecutivas serán la cuantificación de dichos genes en las diferentes librerás.
 
-#por ahora... FIN
 
+
+## 4. Segundo set de datos basado en *Saccharomyces cerevisiae*
+
+Pruebe lo que ha aprendido realizand los pasos anteriores con este otro set de datos de *S. cerevisiae* cuya información podrá encontrar en el siguiente link [https://www.ncbi.nlm.nih.gov/bioproject/PRJNA386475](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA386475)
+
+donde:
+
+SRR5534511 = R3 SA\_YPD  
+SRR5534512 = R2 SA\_YPD  
+SRR5534513 = R1 SA\_YPD  
+SRR5534514 = R2 SA\_MPA  
+SRR5534515 = R1 SA\_MPA  
+SRR5534519 = R3 SA\_MPA  
+
+SA = genotipo,
+YPD = control,
+MPA = tratamiento
+
+    mkdir test2
+
+Para descargar los archivos *reducidos* se puede ejecutar los siguientes comandos
+
+    cd test2
+    mkdir raw && cd raw
+    wget http://genius.bio.puc.cl/genius/workshop/SRR5534511_1M.fastq.gz
+    wget http://genius.bio.puc.cl/genius/workshop/SRR5534512_1M.fastq.gz
+    wget http://genius.bio.puc.cl/genius/workshop/SRR5534513_1M.fastq.gz
+    wget http://genius.bio.puc.cl/genius/workshop/SRR5534514_1M.fastq.gz
+    wget http://genius.bio.puc.cl/genius/workshop/SRR5534515_1M.fastq.gz
+    wget http://genius.bio.puc.cl/genius/workshop/SRR5534519_1M.fastq.gz
+
+    cd ..
+
+Para descargar los archivos *originales* se puede ejecutar los siguientes comandos
+
+    cd test2
+    mkdir raw && cd raw
+    wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR553/001/SRR5534511/SRR5534511.fastq.gz
+    wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR553/002/SRR5534512/SRR5534512.fastq.gz
+    wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR553/003/SRR5534513/SRR5534513.fastq.gz
+    wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR553/004/SRR5534514/SRR5534514.fastq.gz
+    wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR553/005/SRR5534515/SRR5534515.fastq.gz
+    wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR553/009/SRR5534519/SRR5534519.fastq.gz
+    cd ..
+
+Además, descargaremos desde YeastGenome la información del genoma de *Saccharomyces cerevisiae*
+
+    mkdir databases && cd databases
+    wget https://downloads.yeastgenome.org/sequence/S288C_reference/orf_dna/orf_coding_all.fasta.gz
+    wget https://downloads.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-2-1_20150113.tgz
+    wget https://downloads.yeastgenome.org/curation/chromosomal_feature/saccharomyces_cerevisiae.gff
+    cd ..
+
+> NOTA1: Estos reads tienen un tamaño de 50pb, por lo cual al hacer el trimming el largo mínimo se debe cambiar a un valor compatible, por ejemplo **MINLEN:20**
+#
+> NOTA2: Al crear el índice no olvide cambiar el nombre **At\_index** por uno adecuado, por ejemplo **Cs\_index** y no olvide cambiar el nombre del índice cuando realice el segundo paso de Salmon (mapeo). 
+
+
+#por ahora... FIN
 
 <p align="right">by Jonathan Maldonado<br>
 https://github.com/jomaldon
