@@ -15,7 +15,7 @@ Recomiendo que las descargas de programas queden en una carpeta llamada Download
     mkdir Downloads
     cd Downloads
 
-### 1.1 Descarga y habilitación de Trimmomatic (útil para triimming de secuencias por calidad y adaptadores)
+### 1.1 Descarga y habilitación de Trimmomatic (útil para trimming de secuencias por calidad y adaptadores)
 
     wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip
     unzip Trimmomatic/Trimmomatic-0.39.zip
