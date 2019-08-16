@@ -57,9 +57,10 @@ Finalmente, **salir del sistema y volver a entrar** para que los cambios en las 
 
 ### 1.3 Instalación de los programas necesarios usando Anaconda
 
-Ahora vamos a crear un ambiente Anaconda (conda) y lo llamaremos "ambiente1". En este ambiente instalaremos algunos paquetes base que nos permitirán trabajar con los mapeadores. 
+Ahora vamos a crear un ambiente Anaconda (conda) y lo llamaremos "ambiente1". En este ambiente instalaremos algunos paquetes base que nos permitirán trabajar con los mapeadores. La instalación de *java* es opcional pues la mayoría de los sistemas ya incluyen este programa.
 
     conda create -n ambiente1 -c conda-forge jemalloc icu zlib  tbb libstdcxx-ng libboost bzip2 libgcc-ng
+    conda install -n ambiente1 -c cyclus java-jre ## sólo requerido si su sistema no posee java
 
 Ahora vamos a agregar a nuestro "ambiente1" los programas que usaremos en esta guía:  
 
