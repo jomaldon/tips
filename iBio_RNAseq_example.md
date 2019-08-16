@@ -42,6 +42,10 @@ Ejemplo para Linux
 
     wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
 
+Ejemplo para MacOS
+
+    wget https://repo.anaconda.com/archive/Anaconda3-2019.07-MacOSX-x86_64.sh
+
 Para instalar el programa se debe ejecutar el siguiente comando y seguir las instrucciones en pantalla  
 
     bash Anaconda3-2019.07-Linux-x86_64.sh
@@ -260,9 +264,15 @@ Pegar en el archivo el siguiente texto, **guardar y salir**
 
     for fn in */*.sf;
     do
-        echo "Input=${fn} | Output=${fn%_quant/quant.sf}.quant.sf"
-        cp ${fn} ${fn%\_quant/quant.sf}.quant.sf
+    	echo "Input=${fn} | Output=${fn%_quant/quant.sf}.quant.sf"
+    	cp ${fn} ${fn%_quant/quant.sf}.quant.sf
     done
+
+> TIP: Estos comandos de bash permiten buscar y reemplazar un texto dentro de una variable:  
+> %patrón/reemplazo  
+> permite buscar "desde atrás" la palabra "patrón"   y la cambia por "reemplazo"
+> \#patrón/reemplazo   
+> permite buscar "desde el principio" la palabra "patrón" y la cambia por "reemplazo"
 
 Ejecutar el script de la siguiente manera
 
@@ -339,7 +349,7 @@ Además, descargaremos desde YeastGenome la información del genoma de *Saccharo
 
 > NOTA1: Estos reads tienen un tamaño de 50pb, por lo cual al hacer el trimming el largo mínimo se debe cambiar a un valor compatible, por ejemplo **MINLEN:20**
 #
-> NOTA2: Al crear el índice no olvide cambiar el nombre **At\_index** por uno adecuado, por ejemplo **Cs\_index** y no olvide cambiar el nombre del índice cuando realice el segundo paso de Salmon (mapeo). 
+> NOTA2: Al crear el índice no olvide cambiar el nombre **At\_index** por uno adecuado, por ejemplo **Cs\_index** y no olvide cambiar el nombre del índice cuando realice el segundo paso de *Salmon* (mapeo). 
 
 
 #por ahora... FIN
