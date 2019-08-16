@@ -143,11 +143,11 @@ Asumiendo que es necesario hacer un trimming de los reads, vamos a utilizar el p
 Primero entramos en la carpeta donde están los reads y copiamos en ella el archivo que contiene la secuencia de los adaptadores
 
     cd raw
-    cp ~/test1/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa .
+    cp ~/test1/Downloads/Trimmomatic-0.39/adapters/TruSeq3-SE.fa .
 
 El proceso de trimming se debe realizar a todos los archivos, uno a uno, usando el siguiente comando, *modificando los nombres* cada vez que corresponda donde **SRR1811524\_1M\_trimmed.fastq.gz** es el nombre que he asignado al archivo de salida (el cual lógicamente también hay que ir modificando según el caso)
 
-    java -jar ~/test1/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 SRR1811524_1M.fastq.gz SRR1811524_1M_trimmed.fastq.gz ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25
+    java -jar ~/test1/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 SRR1811524_1M.fastq.gz SRR1811524_1M_trimmed.fastq.gz ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25
 
 Una alternativa al paso anterior es crear un script en bash para hacer esta tarea sobre todos los archivos de forma **automática**. Para ello utilizaremos el string **1M.fastq.gz** como "palabra clave" para que bash encuentre todos los archivos deseados. Esta palabra clave la deben modificar si utilizan otras secuencias.
 
@@ -157,9 +157,9 @@ Pueden usar el editor **nano** para crear el archivo
 
 Pegar en el archivo el siguiente texto, **guardar y salir**
 
-    [ -f TruSeq3-PE.fa ] || cp ~/test1/Downloads/Trimmomatic-0.39/adapters/TruSeq3-PE.fa .
+    [ -f TruSeq3-SE.fa ] || cp ~/test1/Downloads/Trimmomatic-0.39/adapters/TruSeq3-SE.fa .
     for f in *1M.fastq.gz; do
-    	java -jar ~/test1/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 $f $(echo $f | sed s/1M\.fastq\.gz/1M_trimmed\.fastq\.gz/) ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25;
+    	java -jar ~/test1/Downloads/Trimmomatic-0.39/trimmomatic-0.39.jar SE -phred33 $f $(echo $f | sed s/1M\.fastq\.gz/1M_trimmed\.fastq\.gz/) ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:10:30 MINLEN:50 AVGQUAL:25;
     done
 
 Ejecutar el script de la siguiente manera
