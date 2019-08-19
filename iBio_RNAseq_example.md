@@ -362,7 +362,7 @@ Además, descargaremos desde YeastGenome la información del genoma de *Saccharo
 > NOTA2: Al crear el índice no olvide cambiar el nombre **At\_index** por uno adecuado, por ejemplo **Cs\_index** y no olvide cambiar el nombre del índice cuando realice el segundo paso de *Salmon* (mapeo). 
 
 
-# por ahora... FIN
+# por ahora... FIN 
 
 <p align="right">by Jonathan Maldonado<br>
 https://github.com/jomaldon
