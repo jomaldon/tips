@@ -76,7 +76,7 @@ Ahora vamos a agregar a nuestro "ambiente1" los programas que usaremos en esta g
 
 **Como alternativa**, si desea una instalación que le permita probar y comparar diversos "mapeadores" puede ejecutar el siguiente comando (tomará más tiempo y ocupará más espacio de disco).
 
-    conda install -n ambiente2 -c bioconda fastqc multiqc bowtie2 minimap last star hisat2 salmon kallisto busco
+    conda install -n ambiente1 -c bioconda fastqc multiqc bowtie2 minimap last star hisat2 salmon kallisto busco
 
 >Para información sobre las diferencias entre los mapeadores recomiendo **comenzar** por la discusión de este foro:
 >[https://bioinformatics.stackexchange.com/questions/4507/better-aligner-than-bowtie2](https://bioinformatics.stackexchange.com/questions/4507/better-aligner-than-bowtie2)
