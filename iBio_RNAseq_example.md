@@ -1,7 +1,17 @@
 # Sesión 5 | Ejemplo básico de cuantificación para análisis de RNAseq
 
-#### La siguiente guía presenta los pasos básicos para obtener un archivo de cuantificación compatible con el paquete DESeq2 de R.
-Todos los pasos pueden ser ejecutados en su computador personal si cuenta con *macOS*, *Linux* (preferencia ubuntu 18.04) o *Windows con Subsistema de Linux* **(WSL)**.
+#### La siguiente guía presenta los pasos básicos para obtener un archivo de cuantificación compatible con el paquete DESeq2 de R usando la herramienta Salmon.
+
+A modo de referencia, en los siguientes enlaces pueden encontrar información y ejemplos de uso de Salmon y DESeq2
+
+- [https://combine-lab.github.io/salmon/](https://combine-lab.github.io/salmon/)
+- [https://combine-lab.github.io/salmon/getting_started/](https://combine-lab.github.io/salmon/getting_started)  
+- [https://salmon.readthedocs.io/en/latest/salmon.html](https://salmon.readthedocs.io/en/latest/salmon.html)
+- [http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#heatmap-of-the-count-matrix](http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#heatmap-of-the-count-matrix)
+- [https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html](https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html)
+- [ftp://ftp.jax.org/dgatti/MouseGen2016/DifferentialExpression.html](ftp://ftp.jax.org/dgatti/MouseGen2016/DifferentialExpression.html)
+
+Todos los pasos que describo a continuación pueden ser ejecutados en su computador personal si cuenta con *macOS*, *Linux* (preferencia ubuntu 18.04) o *Windows con Subsistema de Linux* **(WSL)**.
 
 ## 1. Descarga e instalación de programas
 
@@ -63,7 +73,7 @@ Finalmente, **salir del sistema y volver a entrar** para que los cambios en las 
 
 Ahora vamos a crear un ambiente Anaconda (conda) y lo llamaremos "ambiente1". En este ambiente instalaremos algunos paquetes base que nos permitirán trabajar con los mapeadores. La instalación de *java* es opcional pues la mayoría de los sistemas ya incluyen este programa.
 
-    conda create -n ambiente1 -c conda-forge jemalloc icu zlib  tbb libstdcxx-ng libboost bzip2 libgcc-ng
+    conda create -n ambiente1 -c conda-forge jemalloc icu zlib tbb libboost bzip2 libcxx
     conda install -n ambiente1 -c cyclus java-jre ## sólo requerido si su sistema no posee java
 
 Ahora vamos a agregar a nuestro "ambiente1" los programas que usaremos en esta guía:  
@@ -81,7 +91,7 @@ Ahora vamos a agregar a nuestro "ambiente1" los programas que usaremos en esta g
 >Para información sobre las diferencias entre los mapeadores recomiendo **comenzar** por la discusión de este foro:
 >[https://bioinformatics.stackexchange.com/questions/4507/better-aligner-than-bowtie2](https://bioinformatics.stackexchange.com/questions/4507/better-aligner-than-bowtie2)
 
-Finalmente **activamos** el ambiente con el siguiente comando
+Finalmente **activamos** el ambiente Anaconda con el siguiente comando
 
     conda activate ambiente1
 
