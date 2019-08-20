@@ -61,14 +61,17 @@ Para instalar el programa se debe ejecutar el siguiente comando y seguir las ins
 
     bash Anaconda3-2019.07-Linux-x86_64.sh
 
-Una vez terminada la instalación se debe responder "SI" (yes) al último mensaje con lo cual el sistema los dejará dentro del "ambiente1" de conda.
+Una vez terminada la instalación se debe responder "SI" (yes) al último mensaje con lo cual el sistema los dejará dentro del "ambiente1" de conda.  
 
-El siguiente comando previene que el sistema Anaconda se inicie de forma automática 
+Ahora debe **salir del sistema y volver a entrar**. Esto significa cerrar la terminal y volver a abrirla o deslogearse del sistema y volver a entrar según el caso. [comando *exit*]
+
+En la línea de comandos verá que la palabra **(base)** antecede todas las líneas. Esto significa que está dentro del sistema "base" de anaconda.
+
+El siguiente comando previene que el sistema "base" de Anaconda se inicie de forma automática lo cual es recomendado.   
 
     conda config --set auto_activate_base false
 
-Finalmente, **salir del sistema y volver a entrar** para que los cambios en las variables de entorno sean actualizadas. Esto significa cerrar la terminal y volver a abrirla o deslogearse del sistema y volver a entrar según el caso. [comando *exit*]
-
+Finalmente, **salir del sistema y volver a entrar** para que los cambios en las variables de entorno sean actualizadas. 
 
 ### 1.3 Instalación de los programas necesarios usando Anaconda
 
