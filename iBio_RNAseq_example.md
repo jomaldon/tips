@@ -11,6 +11,7 @@ A modo de referencia, en los siguientes enlaces pueden encontrar información y 
 - [https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html](https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html)
 - [ftp://ftp.jax.org/dgatti/MouseGen2016/DifferentialExpression.html](ftp://ftp.jax.org/dgatti/MouseGen2016/DifferentialExpression.html)
 
+
 Todos los pasos que describo a continuación pueden ser ejecutados en su computador personal si cuenta con *macOS*, *Linux* (preferencia ubuntu 18.04) o *Windows con Subsistema de Linux* **(WSL)**.
 
 ## 1. Descarga e instalación de programas
@@ -56,7 +57,7 @@ Ejemplo para MacOS
 
     wget https://repo.anaconda.com/archive/Anaconda3-2019.07-MacOSX-x86_64.sh
 
-Para instalar el programa se debe ejecutar el siguiente comando y seguir las instrucciones en pantalla  
+Para instalar el programa se debe ejecutar el siguiente comando y seguir las instrucciones en pantalla.  
 
     bash Anaconda3-2019.07-Linux-x86_64.sh
 
