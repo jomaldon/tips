@@ -507,27 +507,47 @@ Ejecutar un comando en los archivos encontrados que poseen el tag. El comando se
 
 Tamaño de directorio y sub directorio
 
-    du -s -h  <nombredirectorio>
-    du -sh  <nombredirectorio> # es lo mismo
+    du -s -h  nombredirectorio
+    du -sh  nombredirectorio # es el mismo comando
 
 ## Compresión
-Descomprimir el contenido de un archivo tipo tgz en la carpeta actual
+**Descomprimir** el contenido de un archivo tipo tgz en la carpeta actual
 
-    tar -xfzv <archivo.tgz> 
+    tar xfz archivo.tgz  
 
-Comprimir un directorio en el archivo salida.tgz
+    # usando multicore
+    tar -I pigz -xf archivo.tgz
+    tar --use-compress-program="pigz -p 16" -xf archivo.tgz # CPUs=16
+    pigz -dc -p 16 archivo.tgz | tar xf -
 
-    tar -cfzv <salida.tgz> <directorio> 
+**Comprimir** un directorio en un archivo **[forma simple]:**
 
-Mostrar el contenido del archivo
+    tar cfz salida.tgz directorio
+    
+    # usando multicore
+    tar -I pigz -cf archivo.tgz directorio
+    tar --use-compress-program="pigz --best --recursive -p 16" -cf archivo.tar.gz directorio # CPUs=16 and best_compression
 
-    tar -tzvf <archivo.tgz>
+**Comprimir** un directorio en el archivo **paso a paso**  
+Comprimir una carpeta involucra dos pasos, el primero es "juntar" o "empacar" los archivos del directorio en un único archivo (comando tar) y luego comprimir este archivo (comando gzip).
 
-Dividir el archivo en varios archivos de tamaño “bytes” (no borra el original)
+    tar -cf salida.tar directorio
+    gzip salida.tar # el archivo ahora se llamará salida.tar.gz
+
+Lo anterior se puede unir de la siguiente forma usando tuberías.
+
+    tar -cf - directorio | gzip > salida.tar.gz
+
+
+**Mostrar** el contenido del archivo
+
+    tar -tzvf archivo.tgz
+
+**Dividir** el archivo en varios archivos de tamaño “bytes” (no borra el original)
 
     split -b <bytes> <file>
 
-Unir los archivos que responden al tag, antes separados con split
+**Unir** los archivos que responden al tag, antes separados con split
 
     cat <tag>* > <file>
 
