@@ -1,4 +1,4 @@
-# Comandos para administrar repositorio Git desde ubuntu 16.04 en Windows10 #
+# Comandos para administrar repositorio Git #
 ## Configurar credenciales github ##
     git config --global user.name "username"
     git config --global user.email "NN@users.noreply.github.com"
