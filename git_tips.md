@@ -38,6 +38,9 @@
 ## Turn off showUntrackedFiles ##
     git config --global status.showUntrackedFiles no
 
+## Cambiar de branch
+    git checkout nombreBranch
+
 ### test ###
 
 
