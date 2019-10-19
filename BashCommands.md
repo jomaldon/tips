@@ -258,7 +258,34 @@ UNICOS_A = archivo que contendrá los datos que “sólo” pertenecen al archiv
 **comando1 | comando2**	= tubería envía el resultado de un comando1 a otro  
 **;** = Separa dos comandos, como si fuesen independientes  
 
+!$ gets the last element of the previous command line argument.
+!^ gets you the first one
+!:3 gets you the third one
+!* gets you all of em
+!! gets you the entire last command. Useful if you forgot to use sudo
+!:1-2 gets you all but the last of 3 arguments
 
+#### Si ejecutas un comando con "argumentos" y deseas ejecutar otro comando usando los mismos argumentos  
+!^      first argument  
+!$      last argument  
+!*      all arguments  
+!:2     second argument  
+!:2-3   second to third arguments  
+!:2-$   second to last arguments  
+!:2*    second to last arguments  
+!:2-    second to next to last arguments  
+!:0     the command  
+!!      repeat the previous line  
+
+ejemplos:  
+
+    mkdir carpeta1 carpeta2 carpeta3 #primer comando
+    !!      # repetirá el comando anterior
+    cd !$   # entrará en carpeta3
+    cd !^   # entrará en carpeta1
+    cd !:2  # entrará en carpeta2
+    !!      # repetirá el comando anterior
+    !:0     # carpeta5 # ejecutará "mkdir carpeta5"
 
 ## Comandos útiles de sistema
 
