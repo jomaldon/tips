@@ -11,7 +11,7 @@
 - [Editores de texto desde la línea de comando](#editores-de-texto-desde-la-l%C3%ADnea-de-comando)
 - [Editores de texto simple usando interfáz gráfica](#editores-de-texto-simple-usando-interf%C3%A1z-gr%C3%A1fica)
 - [Ejemplo de comparación de listas](#ejemplo-de-comparaci%C3%B3n-de-listas)
-- [Modificadores](#modificadores)
+- [Modificadores o comodines)](#modificadores-o-comodines)
 - [Comandos útiles de sistema](#comandos-%C3%BAtiles-de-sistema)
 - [Administración de procesos](#administraci%C3%B3n-de-procesos)
 - [SCRIPTING](#scripting)
@@ -250,7 +250,7 @@ UNICOS_A = archivo que contendrá los datos que “sólo” pertenecen al archiv
 
 
 
-## Modificadores o comodines (wildcards)
+## Modificadores o comodines  
 **\*** = Cualquier texto  
 **?** = un carácter cualquiera  
 **\.** = también puede funcionar como 1 caracter cualquiera en expr reg  
