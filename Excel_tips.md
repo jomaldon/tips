@@ -21,7 +21,13 @@ Ejemplo:
     =MWTEST(A1:C1;D1:F1;2;1;1) # con ambas correcciones
     =MWTEST(A1:C1;D1:F1;2;0;0) # sin correcciones
 
-También se puede usar el MW\_TEST y el MW\_EXACT pero lo recomendado es el anterior
+También se puede usar el MW\_EXACT(A1:C1;D1:F1;colas) y el MW\_TEST(resultado full) pero lo recomendado es MWTEST
+
+Explicación rápida sobre uso de 1 o 2 colas
+https://help.xlstat.com/s/article/cual-es-la-diferencia-entre-una-prueba-de-dos-colas-bilateral-y-de-una-cola-unilateral?language=es
+
+...o en este video
+https://es.coursera.org/lecture/datos-tecnicas/pruebas-de-hipotesis-de-dos-colas-y-de-una-cola-5bWWz
 
 
 <p align="right">by Jonathan Maldonado<br>
