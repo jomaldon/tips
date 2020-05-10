@@ -421,7 +421,7 @@ Para salir del escritorio virtual pero que quede en ejecución
 
 Para listar los procesos que están en screen
 
-    screen -dr
+    screen -ls
 
 Para retomar el screen nombreescritorio
 
