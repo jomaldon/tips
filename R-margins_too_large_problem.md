@@ -10,15 +10,16 @@ Plot device is the place where the plot will be located. By default, in RStudio 
 Here you will find some tips to obtain *that* desired graph.
 
 ### 1) Adjust the plot windows
-Move the limit of the RStudio plot windows to maximize the plotting area.\
-\
+Move the limit of the RStudio plot windows to maximize the plotting area.
 \
 <img align="left" src="images\R-margins_too_large_problem\fig1.PNG">  
 
-Just press the maximization button (top right the plot windows) and also move the vertical limit.  
+Just press the maximization button (top right the plot windows) and also move the vertical limit.
+\
 <img align="left" src="images\R-margins_too_large_problem\fig2.PNG">  
   
-Finally, before the new plot, execute dev.off() to clear the device cache.  
+Finally, before the new plot, execute dev.off() to clear the device cache.
+\
 <img align="left" src="images\R-margins_too_large_problem\fig3.PNG">  
   
 ### 2) Adjust the plot margins
