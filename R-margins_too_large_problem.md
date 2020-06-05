@@ -42,7 +42,7 @@ There are an alternative "plotting device" on MS Windows and Ubuntu R version th
 \
 \
 <img align="left" src="images\R-margins_too_large_problem\fig6.PNG">
-<p><br><br>
+<p>hello<br><br>
 </p>
 <img align="left" src="images\R-margins_too_large_problem\fig7.PNG">
 
