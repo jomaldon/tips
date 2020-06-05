@@ -42,8 +42,7 @@ There are an alternative "plotting device" on MS Windows and Ubuntu R version th
 \
 \
 <img align="left" src="images\R-margins_too_large_problem\fig6.PNG">
-<p>hello<br><br>
-</p>
+<p>&nbsp;<br></p>
 <img align="left" src="images\R-margins_too_large_problem\fig7.PNG">
 
 On Windows version, this plotting device give you different ways to export the graph or just to copy & paste to the clipboard. On Linux and MAC the **x11()** menu could be different.
