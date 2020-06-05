@@ -13,20 +13,18 @@ Here you will find some tips to obtain *that* desired graph.
 Move the limit of the RStudio plot windows to maximize the plotting area.
 \
 \
-<img align="left" src="images\R-margins_too_large_problem\fig1.PNG">
+<img align="left" src="images\R-margins_too_large_problem\fig1.PNG"><br><br>
 
 Just press the maximization button (top right the plot windows) and also move the vertical limit.
 \
 \
-<img align="left" src="images\R-margins_too_large_problem\fig2.PNG">
-\
-\
+<img align="left" src="images\R-margins_too_large_problem\fig2.PNG"><br><br>
+
 Finally, before the new plot, execute dev.off() to clear the device cache.
 \
 \
-<img align="left" src="images\R-margins_too_large_problem\fig3.PNG">
-\
-\
+<img align="left" src="images\R-margins_too_large_problem\fig3.PNG"><br><br>
+
 ### 2) Adjust the plot margins
 Margins are a plot feature thar could be adjusted. On the example, margins will be set to *3*, cutting a part of the white space on borders, but also a part of the text. On this case, a value of *4* will be fine (not shown).
 \
