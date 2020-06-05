@@ -1,4 +1,4 @@
-Some times in R you get this kind of annoying message 
+## Some times in R you get this kind of annoying message 
 
 ```diff
 - Error in plot.new() : figure margins too large
@@ -60,7 +60,7 @@ On Windows version, this plotting device give you different ways to export the g
 
 This feature is out of the box in MS Windows and Ubuntu but, following some instructions, could be activated in MAC and other Linux versions.
 
-The following commands are just an example of what I found on [internet](http://macappstore.org/xquartz/).
+The following commands are just an example of what I've found on [internet](http://macappstore.org/xquartz/).
 > MACOS need the XQuartz program to enable the x11() feature. With **Homebrew** installed this command should work. 
 >> brew cask install xquartz
 > Then, open XQuartz app and try the x11() and your plot in R.
