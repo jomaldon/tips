@@ -2,6 +2,13 @@ Some times in R you get this kind of annoying message
 
 - ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="red") `red color`
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+```
+
 **Error in plot.new() : figure margins too large**
 
 This means, as the message said, that your plot exceed the plot device limits. Plot device is the place where the plot will be located
