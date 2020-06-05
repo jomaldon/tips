@@ -11,8 +11,8 @@ Here you will find some tips to obtain *that* desired graph.
 
 ### 1) Adjust the plot windows
 Move the limit of the RStudio plot windows to maximize the plotting area. 
-      
-      
+&nbsp;  
+&nbsp;  
 <img align="left" src="images\R-margins_too_large_problem\fig1.PNG">
   
 Just press the maximization button (top right the plot windows) and also move the vertical limit.
