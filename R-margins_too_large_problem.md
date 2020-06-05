@@ -25,7 +25,7 @@ As you can see, this plotting device give you different ways to export the graph
 
 This feature is out of the box in MS Windows but, following some instructions, could be activated in MAC or Linux.
 
-> MACOS with Homebrew
+> MACOS with Homebrew  
 > brew cask install xquartz
 
 > LINUX
