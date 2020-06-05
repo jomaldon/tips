@@ -12,6 +12,8 @@ Here you will find some tips to obtain *that* desired graph.
 ### 1) Adjust the plot windows
 Move the limit of the RStudio plot windows to maximize the plotting area.  Just press the maximization button (top right the plot windows) and also move the vertical limit, and finally, before the new plot, execute dev.off() to clear the device cache.
 
+<img align="left" src="images\R-margins_too_large_problem\fig1.PNG">
+
 ### 2) Adjust the plot margins
 Margins are a plot feature thar could be adjusted. On the example, margins will be set to *3*, cutting a part of the white space on borders, but also a part of the text. On this case, a value of *4* will be fine (not shown).
 
@@ -19,14 +21,14 @@ Margins are a plot feature thar could be adjusted. On the example, margins will 
 When you save the plot, the device is redirected to the new file that is being created. This way, plot limits will be a property of the output device and of the **width** and **height** parameters.
 
 ### 4) Using X11() command
-There are an alternative "plotting device" on MS Windows R version that could be called with the **x11()** command. This will open a new empty windows where the next plot you execute will be plotted. This plotting device could be resized at your convenience (or just maximized) before the plot to ensure the maximun size.
+There are an alternative "plotting device" on MS Windows and Ubuntu R version that could be called with the **x11()** command. This will open a new empty windows where the next plot you execute will be plotted. This plotting device could be resized at your convenience (or just maximized) before the plot to ensure the maximun size.
 
-As you can see, this plotting device give you different ways to export the graph or just to copy & paste to the clipboard.
+On Windows version, this plotting device give you different ways to export the graph or just to copy & paste to the clipboard. On Linux and MAC the **x11()** menu could be different.
 
-This feature is out of the box in MS Windows but, following some instructions, could be activated in MAC or Linux.
+This feature is out of the box in MS Windows and Ubuntu but, following some instructions, could be activated in MAC and other Linux versions.
 
+The following commands are just an example of what I found on internet
 > MACOS with Homebrew  
-> brew cask install xquartz
+>> brew cask install xquartz
 
-> LINUX
-> 
+
