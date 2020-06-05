@@ -42,7 +42,7 @@ When you save the plot, the device is redirected to the new file that is being c
 <img align="left" src="images\R-margins_too_large_problem\fig5.PNG">
 <p>&nbsp;<br></p>
 
-### 4) Using X11() command
+### 4) Using x11() command
 There are an alternative "plotting device" on MS Windows and Ubuntu R version that could be called with the **x11()** command. This will open a new empty windows where the next plot you execute will be plotted. This plotting device could be resized at your convenience (or just maximized) before the plot to ensure the maximun size.
 \
 \
