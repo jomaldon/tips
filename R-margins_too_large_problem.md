@@ -1,6 +1,6 @@
 Some times in R you get this kind of annoying message 
 
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `red color`
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text="red") `red color`
 
 **Error in plot.new() : figure margins too large**
 
