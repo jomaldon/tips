@@ -62,7 +62,7 @@ This feature is out of the box in MS Windows and Ubuntu but, following some inst
 
 The following commands are just an example of what I've found on [internet](http://macappstore.org/xquartz/).
 > MACOS need the XQuartz program to enable the x11() feature. With **Homebrew** installed this command should work. 
->> brew cask install xquartz
+>> brew cask install xquartz  
 > Then, open XQuartz app and try the x11() and your plot in R.
 
 
