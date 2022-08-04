@@ -477,15 +477,23 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
     ssh nombre_usuario@IP_servidor
     ssh nombre_usuario@dominio_servidor
 
-**Copiar** archivo o carpeta a servidor mediante ssh
+**Copiar** archivo o carpeta a servidor mediante **ssh**
 
     scp archivo_local nombre_usuario@IP_servidor:carpeta_destino
     scp -r carpeta_local nombre_usuario@IP_servidor:carpeta_destino
+	    
+**Copiar** archivo o carpeta a servidor mediante **rsync** (agregar -r para recursivo)
 
-**Traer** archivo o carpeta desde servidor mediante ssh
+    rsync -avzh --progress archivo_local nombre_usuario@IP_servidor:carpeta_destino
+
+**Traer** archivo o carpeta desde servidor mediante **ssh**
 
     scp nombre_usuario@IP_servidor:archivo_remoto .
     scp -r nombre_usuario@IP_servidor:carpeta_remota .
+	    
+**Traer** archivo o carpeta a servidor mediante **rsync** (agregar -r para recursivo)
+
+    rsync -avzh --progress nombre_usuario@IP_servidor:archivo_remoto .
 
 **Copiar** archivos o carpetas usando interfaz gráfica. Recomiendo el uso de la aplicación Filezilla.
 
