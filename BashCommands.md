@@ -482,7 +482,8 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
     scp archivo_local nombre_usuario@IP_servidor:carpeta_destino
     scp -r carpeta_local nombre_usuario@IP_servidor:carpeta_destino
 	    
-**Copiar** archivo o carpeta a servidor mediante **rsync** (agregar -r para recursivo, -z para comprimir en caso que los archivos no estén comprimidos)
+**Copiar** archivo o carpeta a servidor mediante **rsync**  
+	    (agregar -r para recursivo, -z para comprimir en caso que los archivos no estén comprimidos, --rsh='ssh -pXX' para usar puerto XX)
 
     rsync -avh --progress archivo_local nombre_usuario@IP_servidor:carpeta_destino
 
@@ -491,7 +492,8 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
     scp nombre_usuario@IP_servidor:archivo_remoto .
     scp -r nombre_usuario@IP_servidor:carpeta_remota .
 	    
-**Traer** archivo o carpeta a servidor mediante **rsync** (agregar -r para recursivo, , -z para comprimir en caso que los archivos no estén comprimidos)
+**Traer** archivo o carpeta a servidor mediante **rsync**  
+	    (agregar -r para recursivo, , -z para comprimir en caso que los archivos no estén comprimidos, --rsh='ssh -pXX' para usar puerto XX)
 
     rsync -avh --progress nombre_usuario@IP_servidor:archivo_remoto .
 
