@@ -476,6 +476,9 @@ Expresion matemática + - * / sin decimales % decimales ( ) anidar
 
     ssh nombre_usuario@IP_servidor
     ssh nombre_usuario@dominio_servidor
+    
+    # Si el servidor responde con un error de DNS probar este comando que también sirve para el caso de tunel
+    ssh nombre_usuario@dominio_servidor -oHostKeyAlgorithms=+ssh-dss
 
 **Copiar** archivo o carpeta a servidor mediante **ssh**
 
