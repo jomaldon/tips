@@ -148,7 +148,7 @@ Mostrar todo el contenido de un archivo (sólo hacerlo con archivos de texto)
 
 Mostrar partes del contenido de un archivo. Se avanza presionando *espacio* y se sale presionando tecla *q*
 
-    more nombre archivo
+    more nombre_archivo
 
 Mostrar el **comienzo** del archivo. Por default muestra las primeras 10 líneas pero si se usa el modificador *-n* se puede especificar el número de líneas
 
@@ -234,13 +234,13 @@ sec6
 
 Los siguientes comandos permiten distintos tipos de comparaciones
 
-    cat A B | sort | uniq -c |  grep  ' 2 ' > DUPLICADOS  
+    cat A.txt B.txt | sort | uniq -c |  grep  ' 2 ' > DUPLICADOS  
 
-    cat A B | sort | uniq -c | awk '{if($1>1) print $2}' > INT  
-    cat A B | sort | uniq -c | awk '{if($1==1) print $2}' > UNICOS  
+    cat A.txt B.txt | sort | uniq -c | awk '{if($1>1) print $2}' > INT  
+    cat A.txt B.txt | sort | uniq -c | awk '{if($1==1) print $2}' > UNICOS  
 
-    cat A INT | sort | uniq -c | awk '{if($1==1) print $2}' > UNICOS_A  
-    cat A UNICOS | sort | uniq -c | awk '{if($1>1) print $2}' > UNICOS_A  
+    cat A.txt INT | sort | uniq -c | awk '{if($1==1) print $2}' > UNICOS_A  
+    cat A.txt UNICOS | sort | uniq -c | awk '{if($1>1) print $2}' > UNICOS_A  
 
 Donde:  
 DUPLICADOS = archivo que contendrá los datos duplicados entre A y B  
